@@ -26,7 +26,7 @@ public class User {
     @Column(unique = true, nullable = false, name="phone")
     private String phone;
     private String profilePic;
-    private String role;
+    private String Role;
     private int numberShare;
     private int created_at;
     private int updated_at;
