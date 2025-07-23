@@ -18,7 +18,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String FullName;
+    private String fullName;
     @Column(unique = true, nullable = false, name="email")
     private String email;
     @Column(unique = true, nullable = false, name="password")
@@ -26,7 +26,7 @@ public class User {
     @Column(unique = true, nullable = false, name="phone")
     private String phone;
     private String profilePic;
-    private String Role;
+    private String role;
     private int numberShare;
     private int created_at;
     private int updated_at;

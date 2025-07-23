@@ -1,8 +1,11 @@
 package dev.as.ikibina.user;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @RequiredArgsConstructor
+@Service
 
 public class UserService {
     private final UserRepository userrepository;
@@ -41,7 +44,7 @@ public class UserService {
 
     public User createUser(User user) {
         //  Check if username already exists
-        if (userrepository.findByFullName(user.getFullName()).isPresent()) {
+        if (userrepository.findByfullName(user.getFullName()).isPresent()) {
             throw new RuntimeException("Username already taken");
         }
 
